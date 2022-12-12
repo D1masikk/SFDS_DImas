@@ -3,7 +3,7 @@
 """
 import numpy as np
 
-def random_predict(number: int=1) -> int:  
+def random_predict(number: int=1) -> int:                          # Угадывание числа компьютером
     """Угазываем число за количество попыток не более 7
 
     Args:
@@ -16,7 +16,7 @@ def random_predict(number: int=1) -> int:
     min = 1
     max = 100
     
-    while True:
+    while True:     
         count+=1
         predict_number = np.random.randint(1, 101)
         if predict_number > number:
@@ -31,12 +31,12 @@ def random_predict(number: int=1) -> int:
     return(count)
 
 
-def score_game(random_predict) -> int:
+def score_game(random_predict) -> int:                        # Среднее количество попыток угадывания
     Count_Is = []
     np.random.seed(1)
-    random_array = np.random.randint(1, 101, size = (1000))
+    random_array = np.random.randint(1, 101, size = (1000))   
     
-    for number in random_array:
+    for number in random_array:                              
         Count_Is.append(random_predict(number))
         score = int(np.mean(Count_Is))
     
