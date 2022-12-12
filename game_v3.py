@@ -4,7 +4,7 @@
 import numpy as np
 
 def random_predict(number: int=1) -> int:                          # Угадывание числа компьютером
-    """Угазываем число за количество попыток не более 7
+    """Угазываем число за количество попыток не более 20
 
     Args:
         number (int, optional): Загаданное число. Defaults to 1.
